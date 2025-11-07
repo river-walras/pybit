@@ -267,3 +267,23 @@ class PositionHTTP(_V5HTTPManager):
             query=kwargs,
             auth=True,
         )
+
+    def get_limit_info(self, **kwargs):
+        """Query user's position limit information.
+
+        Required args:
+            category (string):
+                Product type Unified account: linear
+                Normal account: linear, inverse.
+
+                Please note that category is not involved with business logic
+
+        Returns:
+            Request results as dictionary.
+        """
+        return self._submit_request(
+            method="GET",
+            path=f"{self.endpoint}{Position.GET_LIMIT_INFO}",
+            query=kwargs,
+            auth=True,
+        )

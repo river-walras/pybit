@@ -13,6 +13,7 @@ class Position(str, Enum):
     ADD_MARGIN = "/v5/position/add-margin"
     GET_EXECUTIONS = "/v5/execution/list"
     GET_CLOSED_PNL = "/v5/position/closed-pnl"
+    GET_LIMIT_INFO = "/v5/position/limit-info"
 
     def __str__(self) -> str:
         return self.value
